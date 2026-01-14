@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- GLOBAL SETTINGS --- */
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0f0518; /* Dark Purple Text */
+  overflow-x: hidden; /* Prevents side-scrolling on mobile */
+}
+
+/* --- CUSTOM ANIMATIONS --- */
+.text-gradient {
+  background: linear-gradient(to right, #7e22ce, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3e8ff; 
+}
+::-webkit-scrollbar-thumb {
+  background: #7e22ce; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #581c87; 
+}
