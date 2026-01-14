@@ -7,7 +7,7 @@ const Work = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/projects')
+    fetch('https://tier2digihouse-1.onrender.com/api/projects')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {

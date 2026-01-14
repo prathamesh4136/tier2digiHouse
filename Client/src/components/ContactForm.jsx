@@ -15,7 +15,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/inquiry', formData);
+      await axios.post('https://tier2digihouse-1.onrender.com/api/inquiry', formData);
       setStatus('Message Sent! We will contact you soon.');
       setFormData({ fullName: '', companyName: '', email: '', phone: '', serviceType: 'Video Ads (Reels / YouTube)', message: '' });
     } catch (err) {
