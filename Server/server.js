@@ -12,27 +12,15 @@ const app = express();
 // Middleware
 app.use(express.json());
 // app.use(cors());
-const cors = require("cors");
-
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://tier2digi-house2.vercel.app"
-];
+// const cors = require("cors");
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // allow requests with no origin (Postman, curl)
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    origin: [
+      "http://localhost:5173",
+      "https://tier2digi-house2.vercel.app"
+    ],
+    methods: ["GET", "POST"],
   })
 );
 
